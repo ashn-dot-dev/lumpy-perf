@@ -1,0 +1,13 @@
+import "std";
+
+func fibonacci(n: usize) usize {
+    if n <= 1 {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+func main() void {
+    var answer = fibonacci(25);
+    std::print_format_line(std::out(), "{}", (:[]std::formatter)[std::formatter::init[[typeof(answer)]](&answer)]);
+}

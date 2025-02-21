@@ -1,0 +1,428 @@
+System Info
+===========
+Apple M2
+Darwin Kernel Version 23.6.0: Mon Jul 29 21:16:46 PDT 2024; root:xnu-10063.141.2~1/RELEASE_ARM64_T8112
+
+
+C AOT compiled with optimization -O0
+====================================
+$ clang -O0 -o fibonacci-25 fibonacci-25.c
+$ time ./fibonacci-25
+75025
+
+real	0m0.162s
+user	0m0.002s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.004s
+user	0m0.002s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+
+
+C AOT compiled with optimization -O2
+====================================
+$ clang -O2 -o fibonacci-25 fibonacci-25.c
+$ time ./fibonacci-25
+75025
+
+real	0m0.122s
+user	0m0.000s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.001s
+
+
+Sunder AOT compiled with optimization -O0
+=========================================
+$ sunder-compile -o fibonacci-25 fibonacci-25.sunder
+$ time ./fibonacci-25
+75025
+
+real	0m0.185s
+user	0m0.008s
+sys	0m0.002s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.007s
+user	0m0.005s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.006s
+user	0m0.004s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.005s
+user	0m0.004s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.005s
+user	0m0.004s
+sys	0m0.001s
+
+
+Sunder AOT compiled with optimization -O2
+=========================================
+$ sunder-compile -o fibonacci-25 fibonacci-25.sunder
+$ time ./fibonacci-25
+75025
+
+real	0m0.172s
+user	0m0.002s
+sys	0m0.002s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.004s
+user	0m0.002s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+----------------
+$ time ./fibonacci-25
+75025
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.001s
+
+
+Sunder compiled-and-run using sunder-run with optimization -O0
+==============================================================
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.551s
+user	0m0.362s
+sys	0m0.033s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.553s
+user	0m0.368s
+sys	0m0.033s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.556s
+user	0m0.369s
+sys	0m0.033s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.552s
+user	0m0.371s
+sys	0m0.034s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.560s
+user	0m0.374s
+sys	0m0.035s
+
+
+Sunder compiled-and-run using sunder-run with optimization -O2
+==============================================================
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.879s
+user	0m0.697s
+sys	0m0.038s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.887s
+user	0m0.699s
+sys	0m0.039s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.884s
+user	0m0.699s
+sys	0m0.039s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.886s
+user	0m0.701s
+sys	0m0.038s
+----------------
+$ time sunder-run fibonacci-25.sunder
+75025
+
+real	0m0.882s
+user	0m0.697s
+sys	0m0.040s
+
+
+Lua (Standalone lua.c)
+======================
+$ time lua fibonacci-25.lua
+75025
+
+real	0m0.014s
+user	0m0.011s
+sys	0m0.002s
+----------------
+$ time lua fibonacci-25.lua
+75025
+
+real	0m0.009s
+user	0m0.008s
+sys	0m0.001s
+----------------
+$ time lua fibonacci-25.lua
+75025
+
+real	0m0.008s
+user	0m0.007s
+sys	0m0.001s
+----------------
+$ time lua fibonacci-25.lua
+75025
+
+real	0m0.008s
+user	0m0.007s
+sys	0m0.001s
+----------------
+$ time lua fibonacci-25.lua
+75025
+
+real	0m0.007s
+user	0m0.006s
+sys	0m0.001s
+
+
+Python interpreted using CPython
+================================
+$ time python3 fibonacci-25.py
+75025
+
+real	0m0.031s
+user	0m0.021s
+sys	0m0.004s
+----------------
+$ time python3 fibonacci-25.py
+75025
+
+real	0m0.022s
+user	0m0.019s
+sys	0m0.003s
+----------------
+$ time python3 fibonacci-25.py
+75025
+
+real	0m0.022s
+user	0m0.019s
+sys	0m0.003s
+----------------
+$ time python3 fibonacci-25.py
+75025
+
+real	0m0.022s
+user	0m0.019s
+sys	0m0.003s
+----------------
+$ time python3 fibonacci-25.py
+75025
+
+real	0m0.022s
+user	0m0.019s
+sys	0m0.003s
+
+
+Monkey interpreted using monkey-python.py (CPython)
+===================================================
+$ time python3 ~/sources/monkey-python/monkey.py fibonacci-25.monkey
+75025
+
+real	0m1.389s
+user	0m1.308s
+sys	0m0.078s
+----------------
+$ time python3 ~/sources/monkey-python/monkey.py fibonacci-25.monkey
+75025
+
+real	0m1.376s
+user	0m1.309s
+sys	0m0.066s
+----------------
+$ time python3 ~/sources/monkey-python/monkey.py fibonacci-25.monkey
+75025
+
+real	0m1.377s
+user	0m1.316s
+sys	0m0.060s
+----------------
+$ time python3 ~/sources/monkey-python/monkey.py fibonacci-25.monkey
+75025
+
+real	0m1.387s
+user	0m1.314s
+sys	0m0.072s
+----------------
+$ time python3 ~/sources/monkey-python/monkey.py fibonacci-25.monkey
+75025
+
+real	0m1.380s
+user	0m1.319s
+sys	0m0.059s
+
+
+Lumpy interpreted using lumpy.py (CPython)
+==========================================
+$ time python3 $LUMPY_HOME/lumpy.py fibonacci-25.lumpy
+75025
+
+real	0m3.902s
+user	0m2.512s
+sys	0m1.387s
+----------------
+$ time python3 $LUMPY_HOME/lumpy.py fibonacci-25.lumpy
+75025
+
+real	0m3.943s
+user	0m2.537s
+sys	0m1.404s
+----------------
+$ time python3 $LUMPY_HOME/lumpy.py fibonacci-25.lumpy
+75025
+
+real	0m3.963s
+user	0m2.548s
+sys	0m1.413s
+----------------
+$ time python3 $LUMPY_HOME/lumpy.py fibonacci-25.lumpy
+75025
+
+real	0m3.930s
+user	0m2.530s
+sys	0m1.398s
+----------------
+$ time python3 $LUMPY_HOME/lumpy.py fibonacci-25.lumpy
+75025
+
+real	0m3.957s
+user	0m2.547s
+sys	0m1.408s
+
+
+Lumpy interpreted using lumpy (Nuitka-compiled lumpy.py)
+========================================================
+$ time lumpy fibonacci-25.lumpy
+75025
+
+real	0m3.062s
+user	0m3.031s
+sys	0m0.022s
+----------------
+$ time lumpy fibonacci-25.lumpy
+75025
+
+real	0m3.044s
+user	0m3.026s
+sys	0m0.017s
+----------------
+$ time lumpy fibonacci-25.lumpy
+75025
+
+real	0m3.031s
+user	0m3.013s
+sys	0m0.014s
+----------------
+$ time lumpy fibonacci-25.lumpy
+75025
+
+real	0m3.038s
+user	0m3.018s
+sys	0m0.019s
+----------------
+$ time lumpy fibonacci-25.lumpy
+75025
+
+real	0m3.041s
+user	0m3.027s
+sys	0m0.013s
+
+

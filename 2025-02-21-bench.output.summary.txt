@@ -1,0 +1,93 @@
+System Info
+===========
+Apple M2
+Darwin Kernel Version 23.6.0: Mon Jul 29 21:16:46 PDT 2024; root:xnu-10063.141.2~1/RELEASE_ARM64_T8112
+
+
+C AOT compiled with optimization -O0
+====================================
+0m0.162s
+0m0.004s
+0m0.002s
+0m0.002s
+0m0.002s
+
+C AOT compiled with optimization -O2
+====================================
+0m0.122s
+0m0.002s
+0m0.002s
+0m0.002s
+0m0.002s
+
+Sunder AOT compiled with optimization -O0
+=========================================
+0m0.185s
+0m0.007s
+0m0.006s
+0m0.005s
+0m0.005s
+
+Sunder AOT compiled with optimization -O2
+=========================================
+0m0.172s
+0m0.004s
+0m0.002s
+0m0.002s
+0m0.002s
+
+Sunder compiled-and-run using sunder-run with optimization -O0
+==============================================================
+0m0.551s
+0m0.553s
+0m0.556s
+0m0.552s
+0m0.560s
+
+Sunder compiled-and-run using sunder-run with optimization -O2
+==============================================================
+0m0.879s
+0m0.887s
+0m0.884s
+0m0.886s
+0m0.882s
+
+Lua (Standalone lua.c)
+======================
+0m0.014s
+0m0.009s
+0m0.008s
+0m0.008s
+0m0.007s
+
+Python interpreted using CPython
+================================
+0m0.031s
+0m0.022s
+0m0.022s
+0m0.022s
+0m0.022s
+
+Monkey interpreted using monkey-python.py (CPython)
+===================================================
+0m1.389s
+0m1.376s
+0m1.377s
+0m1.387s
+0m1.380s
+
+Lumpy interpreted using lumpy.py (CPython)
+==========================================
+0m3.902s
+0m3.943s
+0m3.963s
+0m3.930s
+0m3.957s
+
+Lumpy interpreted using lumpy (Nuitka-compiled lumpy.py)
+========================================================
+0m3.062s
+0m3.044s
+0m3.031s
+0m3.038s
+0m3.041s
